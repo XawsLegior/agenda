@@ -1,0 +1,75 @@
+#fundo{
+    -fx-background-color: black;
+    -fx-background-image: url(fundo.png);
+    -fx-background-size: 100% 100%;
+}
+
+#menu{
+    -fx-background-color: rgb(255, 255, 255, 0.6);
+}
+
+TabPane{
+    -fx-background-color: rgb(255, 255, 255, 0.6);
+}
+
+Button{
+    -fx-font-weight: bold;
+    -fx-font-size: 16px;
+    -fx-font-family: impact;
+    -fx-background-color: none;
+    -fx-text-fill: darkorange;
+    -fx-effect: dropshadow(three-pass-box, black, 1, 1, 2, 2);
+}
+Button:hover{
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(three-pass-box, black, 0, 0, 1, 1);
+}
+
+#Tab{
+    -fx-background-color: darkorange;
+    -fx-text-base-color: white;
+    -fx-font-weight: bold;
+    -fx-border-color: black;
+}
+#Tab:hover{
+    -fx-background-color: orange;
+}
+#Tab:selected {
+    -fx-background-color: rgb(255, 255, 255, 0.5);
+    -fx-text-base-color: black;
+}
+
+
+/* ######## JANELA ADICIONAR/EDITAR EVENTO */
+#title{
+    -fx-text-fill: lime;
+    -fx-fill: lime;
+    -fx-font-size: 30px;
+    -fx-font-family: impact;
+    -fx-font-weight: bold;
+}
+
+#evento{
+    -fx-background-color: none;
+    -fx-border-width: 0;
+}
+
+#btnSalvar{
+    -fx-background-color:  #1E90FF;
+    -fx-border-color: black;
+    -fx-text-fill: white;
+    -fx-font-family: ellipsis;
+    -fx-font-weight: bold;
+}
+
+/* ######## JANELA ADICIONAR/EDITAR CONTATO */
+#inputContato{
+    -fx-background-color: darkorange;
+    -fx-border-color: black;
+    -fx-border-size: 2px;
+}
+#textAreaContato .content{
+    -fx-background-color: darkorange;
+    -fx-border-color: black;
+    -fx-border-size: 2px;
+}

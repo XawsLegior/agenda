@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Text?>
+
+<Pane id="fundo" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" stylesheets="@../visual.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.worrigan.agenda.eventos.EventoController">
+   <children>
+      <AnchorPane layoutY="6.0" prefHeight="500.0" prefWidth="800.0">
+         <children>
+            <StackPane layoutX="166.0" layoutY="18.0" prefHeight="49.0" prefWidth="200.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0">
+               <children>
+                  <Label id="title" fx:id="title" alignment="CENTER" prefHeight="38.0" prefWidth="795.0" text="ACTION" textAlignment="CENTER" />
+               </children>
+            </StackPane>
+            <Pane layoutX="1.0" layoutY="76.0" prefHeight="200.0" prefWidth="798.0" style="-fx-background-color: rgb(255, 255, 255, 0.3); -fx-background-image: none;" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0">
+               <children>
+                  <DatePicker fx:id="datePicker" layoutX="21.0" layoutY="46.0" prefHeight="38.0" prefWidth="211.0" promptText="dd/mm/aaaa" showWeekNumbers="true" />
+                  <TextField fx:id="hora" layoutX="21.0" layoutY="122.0" prefHeight="32.0" prefWidth="211.0" promptText="hh:mm" style="-fx-background-color: white;" />
+                  <Text id="title" layoutX="90.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Data" wrappingWidth="140.9830722808838" />
+                  <Text id="title" layoutX="90.0" layoutY="117.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hora" wrappingWidth="140.9830722808838" />
+               </children></Pane>
+            <TextArea id="evento" fx:id="evento" layoutX="14.0" layoutY="278.0" opacity="0.91" prefHeight="164.0" prefWidth="576.0" promptText="Evento" AnchorPane.bottomAnchor="58.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" />
+            <ButtonBar layoutX="74.0" layoutY="443.0" opacity="0.96" prefHeight="57.0" prefWidth="790.0" style="-fx-background-color: gray;" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="443.0">
+              <buttons>
+                <Button id="btnSalvar" fx:id="btnSalvar" alignment="CENTER" mnemonicParsing="false" onMouseClicked="#salvar" prefHeight="36.0" prefWidth="110.0" text="Salvar" />
+              </buttons>
+               <padding>
+                  <Insets right="100.0" />
+               </padding>
+            </ButtonBar>
+         </children>
+      </AnchorPane>
+   </children>
+</Pane>
