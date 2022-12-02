@@ -4,10 +4,7 @@ import com.worrigan.agenda.MainController;
 import com.worrigan.agenda.contatos.funcoes.Editar;
 import com.worrigan.agenda.contatos.funcoes.Salvar;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 
 import java.io.IOException;
 

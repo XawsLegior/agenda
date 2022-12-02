@@ -36,6 +36,7 @@ public class Carregar {
             for (String contato: contatos){
                 String[] dado = contato.split(Contato.separador);
                 main.tableContato.getItems().add(new Contato(dado[0], dado[1], dado[2], dado[3]));
+                main.search.getItems().add(dado[0]);
             }
         }
     }

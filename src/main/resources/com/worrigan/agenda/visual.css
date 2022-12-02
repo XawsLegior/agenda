@@ -12,6 +12,13 @@ TabPane{
     -fx-background-color: rgb(255, 255, 255, 0.6);
 }
 
+.scroll-bar:vertical .thumb{
+    -fx-background-color: darkorange;
+}
+.scroll-bar:vertical{
+    -fx-background-color: gray;
+}
+
 Button{
     -fx-font-weight: bold;
     -fx-font-size: 16px;
@@ -62,6 +69,11 @@ Button:hover{
     -fx-font-weight: bold;
 }
 
+/* ABA CONTATOS */
+.pesquisa{
+    height: 90%;
+}
+
 /* ######## JANELA ADICIONAR/EDITAR CONTATO */
 #inputContato{
     -fx-background-color: darkorange;
@@ -73,3 +85,4 @@ Button:hover{
     -fx-border-color: black;
     -fx-border-size: 2px;
 }
+

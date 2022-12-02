@@ -4,6 +4,7 @@ import com.worrigan.agenda.contatos.Contato;
 import com.worrigan.agenda.contatos.ContatoApplication;
 import com.worrigan.agenda.contatos.ContatoController;
 import com.worrigan.agenda.contatos.funcoes.Editar;
+import com.worrigan.agenda.contatos.funcoes.Pesquisa;
 import com.worrigan.agenda.contatos.funcoes.Visualizar;
 import com.worrigan.agenda.eventos.Evento;
 import com.worrigan.agenda.eventos.EventoApplication;
@@ -11,11 +12,15 @@ import com.worrigan.agenda.eventos.EventoController;
 import com.worrigan.agenda.eventos.VerificarHorariosEvent;
 import com.worrigan.agenda.eventos.funcoes.Carregar;
 import com.worrigan.agenda.eventos.funcoes.Remover;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 
+import java.awt.event.KeyEvent;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 
 public class MainController {
@@ -23,7 +28,6 @@ public class MainController {
     private static EventoController eventoControl;
     private static ContatoController contatoControl;
 
-    @FXML private Button btnAdd;
     @FXML TabPane tabPane;
     @FXML Tab tabEventos;
     /* EVENTOS */
@@ -46,6 +50,7 @@ public class MainController {
     @FXML public TableColumn<String, String> telefoneContato;
     @FXML public TableColumn<String, String> emailContato;
     @FXML public TableColumn<String, String> anotContato;
+    @FXML public ComboBox<String> search;
 
     public static void setEventoControl(EventoController controller){
         eventoControl = controller;
@@ -112,7 +117,7 @@ public class MainController {
     @FXML
     protected void onRemoverContato() throws IOException {
         if(tableContato.selectionModelProperty().get().getSelectedIndex() == -1){return;}
-        com.worrigan.agenda.contatos.funcoes.Remover.remover(tableContato.selectionModelProperty().get().getSelectedIndex(), this);
+        com.worrigan.agenda.contatos.funcoes.Remover.remover(this);
     }
     @FXML
     protected void onVisualizarContato() throws IOException {
@@ -120,7 +125,15 @@ public class MainController {
         ContatoApplication.show();
         Visualizar.visualizar(contatoControl, this);
     }
-
+    @FXML
+    protected void onPesquisa() throws IOException {
+        Pesquisa.pesquisa(this);
+    }
+    @FXML
+    protected void onPesquisaSelect() throws IOException {
+        String itemSelecionado = search.getSelectionModel().getSelectedItem();
+        Pesquisa.pesquisaSelect(itemSelecionado, this);
+    }
     public void initialize() throws IOException {
         /* INICIAR THREAD QUE VAI VERIFICAR EVENTOS */
         VerificarHorariosEvent.eventos(this);
