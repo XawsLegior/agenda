@@ -19,15 +19,15 @@ public class Editar {
         Editar.id = id;
         String dados = Evento.getEventoWithId(id);
         String[] dadoSplit = dados.split(Evento.getSeparador());
-        parent.datePicker.setValue(LocalDate.parse(dadoSplit[1]));
-        parent.hora.setText(dadoSplit[2]);
-        parent.evento.setText(dadoSplit[3]);
+        parent.getDatePicker().setValue(LocalDate.parse(dadoSplit[1]));
+        parent.getHora().setText(dadoSplit[2]);
+        parent.getEvento().setText(dadoSplit[3]);
     }
 
     public static void salvar(EventoController parent, MainController mainParent) throws IOException {
-        LocalDate data = parent.datePicker.getValue();
-        String hora = parent.hora.getText();
-        String evento = parent.evento.getText();
+        LocalDate data = parent.getDatePicker().getValue();
+        String hora = parent.getHora().getText();
+        String evento = parent.getEvento().getText();
         List<String> dados = Files.readAllLines(new File("eventos/eventos.ini").toPath());
         String separador = Evento.getSeparador();
         FileWriter newf = new FileWriter("eventos/eventos.ini");

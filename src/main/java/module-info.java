@@ -6,6 +6,7 @@ module com.worrigan.agenda {
 
     opens com.worrigan.agenda to javafx.fxml;
     opens com.worrigan.agenda.contatos to javafx.fxml;
+    opens com.worrigan.agenda.eventos to javafx.fxml;
 
     exports com.worrigan.agenda;
     exports com.worrigan.agenda.eventos;

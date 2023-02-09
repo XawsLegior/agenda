@@ -12,30 +12,30 @@ import static com.worrigan.agenda.eventos.EventoController.mainController;
 
 public class Salvar {
     public static void salvar(EventoController parent) throws IOException {
-        String dataV = String.valueOf(parent.datePicker.getValue());
-        String horaV = parent.hora.getText();
-        String eventoV = parent.evento.getText();
+        String dataV = String.valueOf(parent.getDatePicker().getValue());
+        String horaV = parent.getHora().getText();
+        String eventoV = parent.getEvento().getText();
         String separador = Evento.getSeparador();
 
         /* VERIFICAR VALORES VAZIOS*/
         if(dataV.getBytes().length < 10){
-            parent.title.setText("Data não pode ficar em branco!");
-            parent.title.setStyle("-fx-text-fill: yellow");
+            parent.getTitle().setText("Data não pode ficar em branco!");
+            parent.getTitle().setStyle("-fx-text-fill: yellow");
             return;
         }
         else if(!horaV.contains(":")){
-            parent.title.setText("Formato de hora inválido! hh:mm - Exemplo 12:45");
-            parent.title.setStyle("-fx-text-fill: yellow");
+            parent.getTitle().setText("Formato de hora inválido! hh:mm - Exemplo 12:45");
+            parent.getTitle().setStyle("-fx-text-fill: yellow");
             return;
         }
         else if(eventoV.contains(separador)){
-            parent.title.setText(String.format("Não informe %s no evento!", separador));
-            parent.title.setStyle("-fx-text-fill: yellow");
+            parent.getTitle().setText(String.format("Não informe %s no evento!", separador));
+            parent.getTitle().setStyle("-fx-text-fill: yellow");
             return;
         }
         else if(eventoV.isEmpty()){
-            parent.title.setText(String.format("Evento não pode ficar em branco!"));
-            parent.title.setStyle("-fx-text-fill: yellow");
+            parent.getTitle().setText(String.format("Evento não pode ficar em branco!"));
+            parent.getTitle().setStyle("-fx-text-fill: yellow");
             return;
         }
 
@@ -48,16 +48,16 @@ public class Salvar {
         f.write("\n");
         f.close();
         mainController.getTableEvento().getItems().add(new Evento(index, dataV, horaV, eventoV));
-        String eventoAtual = parent.title.getText();
-        parent.title.setText("Evento adicionado!");
-        parent.title.setTextFill(Color.WHITE);
+        String eventoAtual = parent.getTitle().getText();
+        parent.getTitle().setText("Evento adicionado!");
+        parent.getTitle().setTextFill(Color.WHITE);
         new Thread(()->{
             try {
                 Thread.sleep(5000);
             } catch (InterruptedException Ignored) {}
             Platform.runLater(()-> {
-                parent.title.setText(eventoAtual);
-                parent.title.setTextFill(Color.LIME);
+                parent.getTitle().setText(eventoAtual);
+                parent.getTitle().setTextFill(Color.LIME);
             });
         }).start();
     }

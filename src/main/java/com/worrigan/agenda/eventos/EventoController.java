@@ -12,11 +12,11 @@ public class EventoController {
     public static MainController mainController;
     private String area;
 
-    @FXML public DatePicker datePicker;
-    @FXML public Label title;
-    @FXML public TextField hora;
-    @FXML public TextArea evento;
-    @FXML public Button btnSalvar;
+    @FXML private DatePicker datePicker;
+    @FXML private Label title;
+    @FXML private TextField hora;
+    @FXML private TextArea evento;
+    @FXML private Button btnSalvar;
 
     public static void setController(MainController main){
         mainController = main;
@@ -47,6 +47,28 @@ public class EventoController {
             Editar.salvar(this, mainController);
             EventoApplication.close();
         }
+    }
+
+    /* GETTERS */
+
+    public DatePicker getDatePicker() {
+        return datePicker;
+    }
+
+    public Label getTitle() {
+        return title;
+    }
+
+    public TextField getHora() {
+        return hora;
+    }
+
+    public TextArea getEvento() {
+        return evento;
+    }
+
+    public Button getBtnSalvar() {
+        return btnSalvar;
     }
 
     public void initialize(){
