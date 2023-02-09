@@ -25,6 +25,6 @@ public class ResizeEvent{
     }
 
     private static void setResizeElements(Double width, Double height){
-        controller.tabPane.setPrefSize(width, height);
+        controller.getTabPane().setPrefSize(width, height);
     }
 }

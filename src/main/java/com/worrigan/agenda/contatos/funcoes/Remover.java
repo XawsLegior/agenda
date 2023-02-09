@@ -11,12 +11,12 @@ import java.util.List;
 
 public class Remover {
     public static void remover(MainController main) throws IOException {
-        int id = main.tableContato.selectionModelProperty().get().getSelectedIndex();
+        int id = main.getTableContato().selectionModelProperty().get().getSelectedIndex();
         List<String> contatos = Files.readAllLines(Path.of("contatos/contatos.ini"));
         FileWriter removido = new FileWriter("contatos/contatos.ini");
         String separador = Contato.separador;
-        Contato itemARemover = main.tableContato.getItems().get(id);
-        main.tableContato.getItems().remove(id);
+        Contato itemARemover = main.getTableContato().getItems().get(id);
+        main.getTableContato().getItems().remove(id);
         int index = 0;
         for (String contato : contatos) {
             String[] dadosSplit = contato.split(separador);

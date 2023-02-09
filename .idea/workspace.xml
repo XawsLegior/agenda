@@ -11,7 +11,20 @@
   <component name="ChangeListManager">
     <list default="true" id="93cf3599-1b5c-42f6-9fdc-eb8785679f52" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/download/Agenda.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/worrigan/agenda/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/worrigan/agenda/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/worrigan/agenda/ResizeEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/worrigan/agenda/ResizeEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/worrigan/agenda/contatos/funcoes/Carregar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/worrigan/agenda/contatos/funcoes/Carregar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/worrigan/agenda/contatos/funcoes/Editar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/worrigan/agenda/contatos/funcoes/Editar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/worrigan/agenda/contatos/funcoes/Pesquisa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/worrigan/agenda/contatos/funcoes/Pesquisa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/worrigan/agenda/contatos/funcoes/Remover.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/worrigan/agenda/contatos/funcoes/Remover.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/worrigan/agenda/contatos/funcoes/Salvar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/worrigan/agenda/contatos/funcoes/Salvar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/worrigan/agenda/contatos/funcoes/Visualizar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/worrigan/agenda/contatos/funcoes/Visualizar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/worrigan/agenda/eventos/VerificarHorariosEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/worrigan/agenda/eventos/VerificarHorariosEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/worrigan/agenda/eventos/funcoes/Carregar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/worrigan/agenda/eventos/funcoes/Carregar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/worrigan/agenda/eventos/funcoes/Editar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/worrigan/agenda/eventos/funcoes/Editar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/worrigan/agenda/eventos/funcoes/Expirado.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/worrigan/agenda/eventos/funcoes/Expirado.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/worrigan/agenda/eventos/funcoes/Remover.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/worrigan/agenda/eventos/funcoes/Remover.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/worrigan/agenda/eventos/funcoes/Salvar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/worrigan/agenda/eventos/funcoes/Salvar.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,17 +94,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/xawsl/Desktop/Instalador&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.41954023&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/xawsl/Desktop/Agenda",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.41954023",
+    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\xawsl\Desktop\agenda\src\main\resources\com\worrigan\agenda" />
@@ -100,97 +113,13 @@
       <recent name="com.worrigan.agenda" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.agenda [jpackage]">
-    <configuration name="agenda [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="clean" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="agenda [compileJava]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="compileJava" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="agenda [javadoc]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="javadoc" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="agenda [jpackage]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="jpackage" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
+  <component name="RunManager">
     <configuration name="agenda [run]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
+        <option name="scriptParameters" value="" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -206,20 +135,9 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <list>
-      <item itemvalue="Gradle.agenda [run]" />
-      <item itemvalue="Gradle.agenda [compileJava]" />
-      <item itemvalue="Gradle.agenda [javadoc]" />
-      <item itemvalue="Gradle.agenda [jpackage]" />
-      <item itemvalue="Gradle.agenda [clean]" />
-    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.agenda [jpackage]" />
-        <item itemvalue="Gradle.agenda [clean]" />
         <item itemvalue="Gradle.agenda [run]" />
-        <item itemvalue="Gradle.agenda [javadoc]" />
-        <item itemvalue="Gradle.agenda [compileJava]" />
       </list>
     </recent_temporary>
   </component>

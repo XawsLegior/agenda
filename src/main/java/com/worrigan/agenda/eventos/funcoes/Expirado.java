@@ -11,7 +11,7 @@ public class Expirado {
     /* EVENTO JÁ INICIADO */
     /* MOVER PARA EXPIRADO & DELETAR DOS EVENTOS ATIVOS */
     public static void expirado(String id, MainController parent) throws IOException {
-        String proximoId = String.valueOf(parent.tableEvento2.getItems().size());
+        String proximoId = String.valueOf(parent.getTableEvento2().getItems().size());
 
         // SALVAR EXPIRADOS & REMOVER
         FileWriter expiradosFile = new FileWriter("eventos/expirados.ini", true);
@@ -26,11 +26,11 @@ public class Expirado {
 
         // MOSTRAR EXPIRADOS NA LIST
         String[] dadosEventoSplit = dadosEvento.split(Evento.getSeparador());
-        parent.id2.setCellValueFactory(new PropertyValueFactory<>("id"));
-        parent.data2.setCellValueFactory(new PropertyValueFactory<>("data"));
-        parent.hora2.setCellValueFactory(new PropertyValueFactory<>("hora"));
-        parent.evento2.setCellValueFactory(new PropertyValueFactory<>("evento"));
-        parent.tableEvento2.getItems().add(new Evento(proximoId, dadosEventoSplit[1], dadosEventoSplit[2], dadosEventoSplit[3]));
-        parent.btnZerar.setDisable(false);
+        parent.getId2().setCellValueFactory(new PropertyValueFactory<>("id"));
+        parent.getData2().setCellValueFactory(new PropertyValueFactory<>("data"));
+        parent.getHora2().setCellValueFactory(new PropertyValueFactory<>("hora"));
+        parent.getEvento2().setCellValueFactory(new PropertyValueFactory<>("evento"));
+        parent.getTableEvento2().getItems().add(new Evento(proximoId, dadosEventoSplit[1], dadosEventoSplit[2], dadosEventoSplit[3]));
+        parent.getBtnZerar().setDisable(false);
     }
 }

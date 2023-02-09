@@ -26,17 +26,17 @@ public class Carregar {
             catch (Exception ignored){}
         }
         /* CRIAR CELULAS */
-        main.nomeContato.setCellValueFactory(new PropertyValueFactory<>("Nome"));
-        main.telefoneContato.setCellValueFactory(new PropertyValueFactory<>("Telefone"));
-        main.emailContato.setCellValueFactory(new PropertyValueFactory<>("Email"));
-        main.anotContato.setCellValueFactory(new PropertyValueFactory<>("Observacao"));
+        main.getNomeContato().setCellValueFactory(new PropertyValueFactory<>("Nome"));
+        main.getTelefoneContato().setCellValueFactory(new PropertyValueFactory<>("Telefone"));
+        main.getEmailContato().setCellValueFactory(new PropertyValueFactory<>("Email"));
+        main.getAnotContato().setCellValueFactory(new PropertyValueFactory<>("Observacao"));
 
         /* MOSTRAR CONTATO NA LISTVIEW */
         if(contatos.size() > 0){
             for (String contato: contatos){
                 String[] dado = contato.split(Contato.separador);
-                main.tableContato.getItems().add(new Contato(dado[0], dado[1], dado[2], dado[3]));
-                main.search.getItems().add(dado[0]);
+                main.getTableContato().getItems().add(new Contato(dado[0], dado[1], dado[2], dado[3]));
+                main.getSearch().getItems().add(dado[0]);
             }
         }
     }

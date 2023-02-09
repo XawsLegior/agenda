@@ -6,8 +6,8 @@ import com.worrigan.agenda.contatos.ContatoController;
 
 public class Visualizar {
     public static void visualizar(ContatoController parent, MainController main){
-        int id = main.tableContato.selectionModelProperty().get().getSelectedIndex();
-        Contato item = main.tableContato.getItems().get(id);
+        int id = main.getTableContato().selectionModelProperty().get().getSelectedIndex();
+        Contato item = main.getTableContato().getItems().get(id);
         parent.nomeContato.setText(item.getNome());
         parent.telefoneContato.setText(item.getTelefone());
         parent.emailContato.setText(item.getEmail());

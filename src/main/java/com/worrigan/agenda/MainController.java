@@ -28,29 +28,29 @@ public class MainController {
     private static EventoController eventoControl;
     private static ContatoController contatoControl;
 
-    @FXML TabPane tabPane;
-    @FXML Tab tabEventos;
+    @FXML private TabPane tabPane;
+    @FXML private Tab tabEventos;
     /* EVENTOS */
-    @FXML public TableView<Evento> tableEvento;
-    @FXML public TableColumn<String, String> id;
-    @FXML public TableColumn<String, String> data;
-    @FXML public TableColumn<String, String> hora;
-    @FXML public TableColumn<String, String> evento;
+    @FXML private TableView<Evento> tableEvento;
+    @FXML private TableColumn<String, String> id;
+    @FXML private TableColumn<String, String> data;
+    @FXML private TableColumn<String, String> hora;
+    @FXML private TableColumn<String, String> evento;
     /* EXPIRADOS */
-    @FXML public TableView<Evento> tableEvento2;
-    @FXML public TableColumn<String, String> id2;
-    @FXML public TableColumn<String, String> data2;
-    @FXML public TableColumn<String, String> hora2;
-    @FXML public TableColumn<String, String> evento2;
-    @FXML public Button btnZerar;
+    @FXML private TableView<Evento> tableEvento2;
+    @FXML private TableColumn<String, String> id2;
+    @FXML private TableColumn<String, String> data2;
+    @FXML private TableColumn<String, String> hora2;
+    @FXML private TableColumn<String, String> evento2;
+    @FXML private Button btnZerar;
 
     /* CONTATOS */
-    @FXML public TableView<Contato> tableContato;
-    @FXML public TableColumn<String, String> nomeContato;
-    @FXML public TableColumn<String, String> telefoneContato;
-    @FXML public TableColumn<String, String> emailContato;
-    @FXML public TableColumn<String, String> anotContato;
-    @FXML public ComboBox<String> search;
+    @FXML private TableView<Contato> tableContato;
+    @FXML private TableColumn<String, String> nomeContato;
+    @FXML private TableColumn<String, String> telefoneContato;
+    @FXML private TableColumn<String, String> emailContato;
+    @FXML private TableColumn<String, String> anotContato;
+    @FXML private ComboBox<String> search;
 
     public static void setEventoControl(EventoController controller){
         eventoControl = controller;
@@ -134,6 +134,86 @@ public class MainController {
         String itemSelecionado = search.getSelectionModel().getSelectedItem();
         Pesquisa.pesquisaSelect(itemSelecionado, this);
     }
+
+    /* ******************** GETTERS ********************
+    */
+
+    public TabPane getTabPane() {
+        return tabPane;
+    }
+
+    public Tab getTabEventos() {
+        return tabEventos;
+    }
+
+    public TableView<Evento> getTableEvento() {
+        return tableEvento;
+    }
+
+    public TableColumn<String, String> getId() {
+        return id;
+    }
+
+    public TableColumn<String, String> getData() {
+        return data;
+    }
+
+    public TableColumn<String, String> getHora() {
+        return hora;
+    }
+
+    public TableColumn<String, String> getEvento() {
+        return evento;
+    }
+
+    public TableView<Evento> getTableEvento2() {
+        return tableEvento2;
+    }
+
+    public TableColumn<String, String> getId2() {
+        return id2;
+    }
+
+    public TableColumn<String, String> getData2() {
+        return data2;
+    }
+
+    public TableColumn<String, String> getHora2() {
+        return hora2;
+    }
+
+    public TableColumn<String, String> getEvento2() {
+        return evento2;
+    }
+
+    public Button getBtnZerar() {
+        return btnZerar;
+    }
+
+    public TableView<Contato> getTableContato() {
+        return tableContato;
+    }
+
+    public TableColumn<String, String> getNomeContato() {
+        return nomeContato;
+    }
+
+    public TableColumn<String, String> getTelefoneContato() {
+        return telefoneContato;
+    }
+
+    public TableColumn<String, String> getEmailContato() {
+        return emailContato;
+    }
+
+    public TableColumn<String, String> getAnotContato() {
+        return anotContato;
+    }
+
+    public ComboBox<String> getSearch() {
+        return search;
+    }
+
     public void initialize() throws IOException {
         /* INICIAR THREAD QUE VAI VERIFICAR EVENTOS */
         VerificarHorariosEvent.eventos(this);

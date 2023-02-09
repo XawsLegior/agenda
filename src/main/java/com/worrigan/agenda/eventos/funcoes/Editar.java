@@ -39,6 +39,6 @@ public class Editar {
             newf.write("\n");
         }
         newf.close();
-        mainParent.tableEvento.getItems().set(id, new Evento(String.valueOf(id), String.valueOf(data), hora, evento));
+        mainParent.getTableEvento().getItems().set(id, new Evento(String.valueOf(id), String.valueOf(data), hora, evento));
     }
 }

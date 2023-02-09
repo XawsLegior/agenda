@@ -32,7 +32,7 @@ public class VerificarHorariosEvent {
     /* VERIFICAR HORARIOS */
     private static void verificarHorarios() throws InterruptedException {
         try {
-            ObservableList<Evento> itens = parent.tableEvento.getItems();
+            ObservableList<Evento> itens = parent.getTableEvento().getItems();
             for (Evento item : itens) {
                 String id = item.getId();
                 long timeAtual = System.currentTimeMillis();

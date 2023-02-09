@@ -40,14 +40,14 @@ public class Salvar {
         }
 
         /* CRIAR ARQUIVO E INSERIR EVENTOS */
-        String index = String.valueOf(mainController.tableEvento.getItems().size());
+        String index = String.valueOf(mainController.getTableEvento().getItems().size());
         FileWriter f = new FileWriter("eventos/eventos.ini", true);
         String event = String.format("%s%s%s%s%s%s%s", index, separador, dataV, separador, horaV, separador, eventoV);
         event = event.replace("\n", "\\n");
         f.write(event);
         f.write("\n");
         f.close();
-        mainController.tableEvento.getItems().add(new Evento(index, dataV, horaV, eventoV));
+        mainController.getTableEvento().getItems().add(new Evento(index, dataV, horaV, eventoV));
         String eventoAtual = parent.title.getText();
         parent.title.setText("Evento adicionado!");
         parent.title.setTextFill(Color.WHITE);

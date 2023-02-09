@@ -13,7 +13,7 @@ public class Remover {
     public static void remover(int id, MainController parent) throws IOException {
         List<String> dados = Files.readAllLines(new File("eventos/eventos.ini").toPath());
         FileWriter newf = new FileWriter("eventos/eventos.ini");
-        parent.tableEvento.getItems().clear();
+        parent.getTableEvento().getItems().clear();
         int index = 0;
         try {
             for (String dado : dados) {
@@ -24,7 +24,7 @@ public class Remover {
                     String novoDado = index + separador + dadoSplit[1] + separador + dadoSplit[2] + separador + dadoSplit[3];
                     newf.write(novoDado);
                     newf.write("\n");
-                    parent.tableEvento.getItems().add(new Evento(String.valueOf(index), dadoSplit[1], dadoSplit[2], dadoSplit[3]));
+                    parent.getTableEvento().getItems().add(new Evento(String.valueOf(index), dadoSplit[1], dadoSplit[2], dadoSplit[3]));
                     index += 1;
                 }
             }

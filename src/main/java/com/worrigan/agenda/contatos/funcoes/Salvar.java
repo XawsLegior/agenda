@@ -37,7 +37,7 @@ public class Salvar {
         f.write("\n");
         f.close();
 
-        main.tableContato.getItems().add(new Contato(nome, telefone, email, anot));
+        main.getTableContato().getItems().add(new Contato(nome, telefone, email, anot));
         parent.contatoLabel.setText("%s foi adicionado.".formatted(nome));
     }
 }
