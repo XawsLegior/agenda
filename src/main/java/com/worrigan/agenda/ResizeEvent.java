@@ -5,8 +5,6 @@ import javafx.stage.Stage;
 
 public class ResizeEvent{
     private static MainController controller;
-    private static double posX = 0;
-    private static double posY = 0;
 
     /* WIDTH */
     public static ChangeListener<? super Number> resizeWidth(Stage stage){

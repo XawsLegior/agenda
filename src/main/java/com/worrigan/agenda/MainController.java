@@ -12,15 +12,11 @@ import com.worrigan.agenda.eventos.EventoController;
 import com.worrigan.agenda.eventos.VerificarHorariosEvent;
 import com.worrigan.agenda.eventos.funcoes.Carregar;
 import com.worrigan.agenda.eventos.funcoes.Remover;
-import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 
-import java.awt.event.KeyEvent;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 
 
 public class MainController {
@@ -140,10 +136,6 @@ public class MainController {
 
     public TabPane getTabPane() {
         return tabPane;
-    }
-
-    public Tab getTabEventos() {
-        return tabEventos;
     }
 
     public TableView<Evento> getTableEvento() {
